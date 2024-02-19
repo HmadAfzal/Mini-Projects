@@ -25,4 +25,4 @@ To integrate the popup feature into your webpage:
    - `.submit`: Represents the submit button that triggers the popup.
 3. Customize the content of the popup message and styling as needed by modifying the HTML template within the JavaScript code.
 
-![popup](popup.png)
+![popup](popup.PNG)
