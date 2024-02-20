@@ -6,9 +6,6 @@ This script provides two main functionalities:
 
 2. **Password Visibility Toggler**: It allows users to toggle the visibility of the password they're typing. When the eye icon is clicked, it switches between showing and hiding the password text.
 
-<div style="text-align:center;">
-![Password Strength Checker and Toggler](passwordField.PNG)
-</div>
 
 ## Usage
 
