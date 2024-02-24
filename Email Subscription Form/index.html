@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Subscription Form</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="main">
+        <div class="formarea">
+        <h3>Coming Soon</h3>
+        <h1>Our New Website Is On Its Way!</h1>
+        <h3>Subscribe for details</h3>
+        <form name="submit-to-google-sheet"><input class="input" type="email" name="Email" placeholder="Your email here"
+                required><button type="submit" class="btn"><img src="send.svg" alt="send"></button></form>
+        <span class="msg"></span>
+    </div></div>
+    <script>
+        let btn = document.querySelector(".btn")
+        let msg = document.querySelector(".msg")
+        let input = document.querySelector(".input")
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzeDrEIctBvnlBjRzK-P0GOW2V1ti-lRPl9u9vBW5EZFXqsPyjkmKSbm_48Z1niZaul/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+        btn.addEventListener("click", () => {
+            if (input.value==="") {
+                msg.innerHTML = ""
+            }
+            else{
+            msg.innerHTML = "Thanks For Subscribing!"
+            setTimeout(() => {
+                input.value=""
+            }, 0);}
+            
+            setTimeout(() => {
+                msg.innerHTML = ""
+            }, 4000);
+        })
+    </script>
+</body>
+
+</html>
