@@ -1,4 +1,4 @@
-# Select Box Readme
+# Select Box
 
 This is a simple implementation of a select box using HTML, CSS, and JavaScript. The select box allows users to choose from a list of options displayed in a dropdown menu.
 
